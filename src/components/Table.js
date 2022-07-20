@@ -31,7 +31,7 @@ class Table extends React.Component {
                 <td>{items.exchangeRates[items.currency].name}</td>
                 <td>{Number(items.exchangeRates[items.currency].ask).toFixed(2)}</td>
                 <td>
-                  {Number(items.value) * Number(items.exchangeRates[items.currency].ask)
+                  {Number((items.value) * (items.exchangeRates[items.currency].ask))
                     .toFixed(2)}
                 </td>
                 <td>Real</td>
