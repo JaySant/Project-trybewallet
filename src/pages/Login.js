@@ -30,7 +30,6 @@ class Login extends React.Component {
   render() {
     const { isDisabled, email } = this.state;
     const { dispatch, history } = this.props;
-    // const {dispatchInput } = this.props;
     return (
       <div>
         <form>
@@ -68,9 +67,6 @@ class Login extends React.Component {
     );
   }
 }
-// const mapDispatchToProps = (dispatch) => ({
-//   dispatchInput: (value) => dispatch(userEmail(value)),
-// });
 
 Login.propTypes = {
   dispatch: PropTypes.func.isRequired,
