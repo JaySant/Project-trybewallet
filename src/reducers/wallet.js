@@ -1,4 +1,4 @@
-import { CURRENCIES_API_SUCCESS, ADD_EXPENSES_SAVE } from '../actions';
+import { CURRENCIES_API_SUCCESS, ADD_EXPENSES_SAVE, DELETE_EXPENSE } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -25,6 +25,12 @@ export default function fetchAPISuccess(state = INITIAL_STATE, action) {
     return {
       ...state,
       expenses: [...state.expenses, action.payload],
+    };
+
+  case DELETE_EXPENSE:
+    return {
+      ...state,
+      expenses: state.expenses.filter((expense) => expense.id !== action.payload),
     };
   default:
     return state;

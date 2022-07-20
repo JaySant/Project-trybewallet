@@ -34,7 +34,8 @@ const mapStateToProps = (state) => ({
 
 Header.propTypes = {
   email: PropTypes.string.isRequired,
-  expenses: PropTypes.string.isRequired,
-  currencyInicial: PropTypes.string.isRequired,
+  expenses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  currencyInicial: PropTypes.string,
 };
+Header.defaultProps = { currencyInicial: 'BRL' };
 export default connect(mapStateToProps, null)(Header);

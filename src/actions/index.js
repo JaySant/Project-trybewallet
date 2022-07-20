@@ -2,6 +2,7 @@ import getData from '../services/api';
 
 export const ADD_EMAIL = 'ADD_EMAIL';
 export const CURRENCIES_API_SUCCESS = 'CURRENCIES_API';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 export const ADD_EXPENSES_SAVE = 'ADD_EXPENSES_SAVE';
 
 export const userEmail = (email) => ({
@@ -40,3 +41,8 @@ export const fetchThunkExpenses = (expense) => async (dispatch) => {
 
   dispatch(fetchAPIExpenses(expenses));
 };
+
+export const deleteExpense = (expense) => ({
+  type: DELETE_EXPENSE,
+  payload: expense,
+});
